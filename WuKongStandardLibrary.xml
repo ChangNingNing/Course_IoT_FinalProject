@@ -246,7 +246,7 @@
     </WuClass>
     <WuClass name="ParkingSpot" id="1020" virtual="false" type="hard">
         <property name="ispress" access="readwrite" datatype="short" default="0"  />
-        <property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="200"  />
+        <property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="50"  />
     </WuClass>
 
 
@@ -542,12 +542,23 @@
         <property name="valid" access="readwrite" datatype="short" default="0" />
         <property name="pattern" access="readwrite" datatype="short" default="0" />
     </WuClass>
-    <WuClass name="myAWS_Daemon" id="2041" virtual="false" type="hard">
+    <WuClass name="spot_AWS_Daemon" id="2041" virtual="false" type="hard">
         <property name="selfID" access="readwrite" datatype="short" default="0" />
-        <property name="nValid" access="readwrite" datatype="short" default="0" />
+        <property name="trigger" access="readwrite" datatype="short" default="0"/>
+        <property name="nvalid" access="readwrite" datatype="short" default="0" />
         <property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="50" />
     </WuClass>
-
+    <WuClass name="light_AWS_Daemon" id="2042" virtual="false" type="hard">
+        <property name="selfID" access="readwrite" datatype="short" default="0" />
+        <property name="r_left" access="readwrite" datatype="short" default="0" />
+        <property name="r_forward" access="readwrite" datatype="short" default="0" />
+        <property name="r_right" access="readwrite" datatype="short" default="0" />
+        <property name="i_left" access="readwrite" datatype="short" default="0" />
+        <property name="i_forward" access="readwrite" datatype="short" default="0" />
+        <property name="i_right" access="readwrite" datatype="short" default="0" />
+        <property name="state" access="readwrite" datatype="short" default="0" />
+        <property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="50" />
+    </WuClass>
 
     <!-- PrClasses -->
    <WuClass name="ICSDemoFloorlampPrClass" id="9000" virtual="false" type="hard">

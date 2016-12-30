@@ -6,9 +6,7 @@ import random
 from math import log
 import time
 
-import udpdevice_ParkingGuide
 import udpdevice_ParkingSpot
-import udpdevice_light_agent
 import udpdevice_spot_aws_daemon
 
 class MyDevice(Device):
@@ -16,21 +14,13 @@ class MyDevice(Device):
         Device.__init__(self,addr,localaddr)
 
     def init(self):
-        m1 = udpdevice_ParkingGuide.ParkingGuide()
+        m1 = udpdevice_ParkingSpot.ParkingSpot()
         self.addClass(m1,0)
-        self.obj_parking_guide = self.addObject(m1.ID)
+        self.obj_parking_spot = self.addObject(m1.ID)
         
-        m2 = udpdevice_ParkingSpot.ParkingSpot()
-        self.addClass(m2,0)
-        self.obj_parking_spot = self.addObject(m2.ID)
-        
-        m3 = udpdevice_light_agent.Light_Agent()
-        self.addClass(m3,self.FLAG_VIRTUAL)
-        self.obj_light_agent = self.addObject(m3.ID)
-        
-        m4 = udpdevice_spot_aws_daemon.spot_AWS_Daemon()
-        self.addClass(m4, 0)
-        self.obj_spot_aws = self.addObject(m4.ID)
+        m2 = udpdevice_spot_aws_daemon.spot_AWS_Daemon()
+        self.addClass(m2, 0)
+        self.obj_spot_aws = self.addObject(m2.ID)
 
 if len(sys.argv) <= 2:
         print 'python udpwkpf.py <ip> <ip:port>'

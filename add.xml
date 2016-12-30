@@ -22,6 +22,6 @@
     <property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="50" />
 </WuClass>
 <WuClass name="ParkingSpot" id="1020" virtual="false" type="hard">
-	<property name="isPress" access="readwrite" datatype="short" default="false"  />
+	<property name="isPress" access="readwrite" datatype="short" default="0"  />
 	<property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="200"  />
 </WuClass>

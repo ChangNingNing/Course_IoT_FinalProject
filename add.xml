@@ -1,14 +1,14 @@
 <WuClass name="Road_Agent" id="19" virtual="true" type="soft">     
     <property name="trigger" access="readwrite" datatype="boolean" default="false"/>
-    <property name="nValid" access="readwrite" datatype="short" default="0"/>
+    <property name="nvalid" access="readwrite" datatype="short" default="0"/>
 </WuClass>
 <WuClass name="Light_Agent" id="20" virtual="true" type="soft">
-    <property name="R_left" access="readwrite" datatype="short" default="0"/>
-    <property name="R_forward" access="readwrite" datatype="short" default="0"/>
-    <property name="R_right" access="readwrite" datatype="short" default="0"/>
-    <property name="I_left" access="readwrite" datatype="short" default="0"/>
-    <property name="I_forward" access="readwrite" datatype="short" default="0"/>
-    <property name="I_right" access="readwrite" datatype="short" default="0"/>
+    <property name="r_left" access="readwrite" datatype="short" default="0"/>
+    <property name="r_forward" access="readwrite" datatype="short" default="0"/>
+    <property name="r_right" access="readwrite" datatype="short" default="0"/>
+    <property name="i_left" access="readwrite" datatype="short" default="0"/>
+    <property name="i_forward" access="readwrite" datatype="short" default="0"/>
+    <property name="i_right" access="readwrite" datatype="short" default="0"/>
     <property name="pattern" access="readwrite" datatype="short" default="0"/>
     <property name="state" access="readwrite" datatype="short" default="0"/>
 </WuClass>
@@ -22,6 +22,6 @@
     <property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="50" />
 </WuClass>
 <WuClass name="ParkingSpot" id="1020" virtual="false" type="hard">
-	<property name="isPress" access="readwrite" datatype="short" default="false"  />
+	<property name="ispress" access="readwrite" datatype="short" default="0"  />
 	<property name="refresh_rate" access="readwrite" datatype="refresh_rate" default="200"  />
 </WuClass>

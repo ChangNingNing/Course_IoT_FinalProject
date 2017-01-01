@@ -14,13 +14,29 @@ class MyDevice(Device):
         Device.__init__(self,addr,localaddr)
 
     def init(self):
-        m2 = udpdevice_light_agent.Light_Agent()
-        self.addClass(m2,self.FLAG_VIRTUAL)
-        self.obj_light_agent = self.addObject(m2.ID)
+        m1 = udpdevice_light_agent.Light_Agent()
+        self.addClass(m1,self.FLAG_VIRTUAL)
+        self.obj_light_agent = self.addObject(m1.ID)
 
-        m3 = udpdevice_light_aws_daemon.light_AWS_Daemon()
-        self.addClass(m3, 0)
-        self.obj_light_aws = self.addObject(m3.ID)
+        m2 = udpdevice_light_aws_daemon.light_AWS_Daemon()
+        self.addClass(m2, 0)
+        self.obj_light_aws = self.addObject(m2.ID)
+
+        m3 = udpdevice_light_agent.Light_Agent()
+        self.addClass(m3,self.FLAG_VIRTUAL)
+        self.obj_light_agent2 = self.addObject(m3.ID)
+
+        m4 = udpdevice_light_aws_daemon.light_AWS_Daemon()
+        self.addClass(m4, 0)
+        self.obj_light_aws2 = self.addObject(m4.ID)
+
+        m5 = udpdevice_light_agent.Light_Agent()
+        self.addClass(m5,self.FLAG_VIRTUAL)
+        self.obj_light_agent3 = self.addObject(m5.ID)
+
+        m6 = udpdevice_light_aws_daemon.light_AWS_Daemon()
+        self.addClass(m6, 0)
+        self.obj_light_aws3 = self.addObject(m6.ID)
 
 if len(sys.argv) <= 2:
         print 'python udpwkpf.py <ip> <ip:port>'
